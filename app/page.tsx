@@ -68,6 +68,17 @@ export default function Home() {
               <span>qiita.com/ae14watanabe</span>
             </a>
           </li>
+          <li>
+            <a
+              href="https://github.com/ae14watanabe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 font-medium text-zinc-900 transition-colors hover:border-zinc-400 hover:bg-zinc-100 dark:border-white/10 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-white/30 dark:hover:bg-zinc-800"
+            >
+              <span aria-hidden>⎇</span>
+              <span>github.com/ae14watanabe</span>
+            </a>
+          </li>
         </ul>
       </main>
     </div>
