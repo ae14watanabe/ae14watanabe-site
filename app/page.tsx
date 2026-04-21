@@ -17,7 +17,10 @@ export default function Home() {
             <p className="font-mono text-sm tracking-wider text-zinc-500 dark:text-zinc-400">
               @ae14watanabe
             </p>
-            <h1 className="mt-2 text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl dark:text-zinc-50">
+            <h1
+              style={{ fontFamily: "var(--font-jp)" }}
+              className="mt-2 text-4xl tracking-tight text-zinc-950 sm:text-5xl dark:text-zinc-50"
+            >
               渡辺 龍二
             </h1>
             <p
