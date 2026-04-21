@@ -27,7 +27,7 @@ export default function Home() {
               style={{ fontFamily: "var(--font-fraunces), serif" }}
               className="mt-1 text-xl italic tracking-wide text-zinc-500 dark:text-zinc-400"
             >
-              Ryuji WATANABE
+              WATANABE Ryuji
             </p>
             <p className="mt-5 text-base leading-7 text-zinc-700 dark:text-zinc-300">
               Web/AI Engineer @ GMO Pepabo, Inc.
