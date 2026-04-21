@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces, Kosugi_Maru } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,6 +17,11 @@ const fraunces = Fraunces({
   subsets: ["latin"],
 });
 
+const kosugiMaru = Kosugi_Maru({
+  variable: "--font-jp",
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "渡辺 龍二 / ae14watanabe",
   description: "渡辺龍二 (ae14watanabe) のプロフィールサイト",
@@ -30,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} ${kosugiMaru.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
