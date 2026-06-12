@@ -1,5 +1,43 @@
 import Image from "next/image";
 
+// NOTE: 公開してよい情報のみで構成（社内・未公開プロダクトの情報は含めない）。
+const career = [
+  {
+    period: "2026 – 現在",
+    role: "Web / AI エンジニア",
+    org: "GMO ペパボ株式会社 ロリポップ・ムームードメイン事業部",
+    detail: "",
+  },
+  {
+    period: "2024 – 2026",
+    role: "Web / AI エンジニア",
+    org: "GMO ペパボ株式会社 SUZURI 事業部",
+    detail:
+      "事業部のエンジニアとして、機械学習を導入した機能開発・運用（規約違反チェックの AI 化など）に従事。並行して機械学習に関わらない開発も行う。",
+  },
+  {
+    period: "2021 – 2024",
+    role: "研究開発員",
+    org: "GMO ペパボ株式会社 ペパボ研究所",
+    detail:
+      "新卒入社。博士課程の研究をサービスのデータへ適用し、国内学会で発表。サービスへの機械学習導入を進める。",
+  },
+  {
+    period: "2016 – 2022",
+    role: "博士（情報工学）",
+    org: "九州工業大学大学院 生命体工学研究科（古川研究室）",
+    detail:
+      "2016年4月入学。2018年に博士前期課程（修士）を、2022年に博士後期課程を修了。集合データの可視化分析に向けた生成モデリングを研究。",
+  },
+  {
+    period: "2009 – 2016",
+    role: "本科・専攻科 修了",
+    org: "熊本高等専門学校",
+    detail:
+      "2009年4月に本科へ入学し、2014年3月に本科を、2016年3月に専攻科を修了。",
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-1 items-center justify-center bg-gradient-to-br from-amber-50 via-rose-50 to-sky-50 px-6 py-16 font-sans dark:from-zinc-900 dark:via-zinc-950 dark:to-black">
@@ -90,6 +128,45 @@ export default function Home() {
             </a>
           </li>
         </ul>
+
+        <section className="mt-12 border-t border-zinc-200/70 pt-10 dark:border-white/10">
+          <div className="flex items-baseline gap-3">
+            <h2
+              style={{ fontFamily: "var(--font-jp)" }}
+              className="text-2xl tracking-tight text-zinc-950 dark:text-zinc-50"
+            >
+              経歴
+            </h2>
+            <span
+              style={{ fontFamily: "var(--font-fraunces), serif" }}
+              className="text-sm italic tracking-wide text-zinc-400 dark:text-zinc-500"
+            >
+              Career
+            </span>
+          </div>
+
+          <ol className="relative mt-8 space-y-8 border-l border-zinc-200 pl-6 dark:border-white/10">
+            {career.map((item) => (
+              <li key={`${item.period}-${item.org}`} className="relative">
+                <span className="absolute -left-[30px] top-1.5 h-3 w-3 rounded-full border-2 border-white bg-amber-400 ring-1 ring-zinc-200 dark:border-zinc-950 dark:ring-white/10" />
+                <p className="font-mono text-xs tracking-wider text-zinc-500 dark:text-zinc-400">
+                  {item.period}
+                </p>
+                <h3 className="mt-1 text-base font-medium text-zinc-900 dark:text-zinc-100">
+                  {item.role}
+                </h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {item.org}
+                </p>
+                {item.detail && (
+                  <p className="mt-1 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+                    {item.detail}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
       </main>
     </div>
   );
