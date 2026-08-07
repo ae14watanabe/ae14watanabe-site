@@ -4,7 +4,7 @@ import Image from "next/image";
 const career = [
   {
     period: "2026 – 現在",
-    role: "Web / AI エンジニア",
+    role: "Web / AI シニアエンジニア",
     org: "GMO ペパボ株式会社 ロリポップ・ムームードメイン事業部",
     detail: "",
   },
