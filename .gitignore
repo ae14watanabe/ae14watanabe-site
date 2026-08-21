@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# lolipop (LOLIPOP! Deploy Now) — personal project link
+/.lolipop/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
